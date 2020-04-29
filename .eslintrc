@@ -1,0 +1,42 @@
+{
+    "parser": "babel-eslint",
+    "settings": {
+      "react": {
+        "version": "latest"
+      }
+    },
+    "plugins": ["prettier", "jest"],
+  
+    "extends": [
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react",
+      "plugin:jest/recommended",
+      "plugin:jest/style"
+    ],
+    "rules": {
+      "camelcase": [
+        0,
+        {
+          "properties": "never"
+        }
+      ],
+      "react/prop-types": [2, { "ignore": [ "state", "history", "location", "dispatch", "children", "className" ] } ],
+      "react/display-name": 0
+    },
+    "globals": {
+      "window": true,
+      "document": true,
+      "localStorage": true,
+      "sessionStorage": true,
+      "FormData": true,
+      "FileReader": true,
+      "File": true,
+      "Blob": true,
+      "navigator": true,
+      "fetch": true,
+      "Audio": true,
+      "Notification": true
+    }
+  }
+  
