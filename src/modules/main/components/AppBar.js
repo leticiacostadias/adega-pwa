@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
 import Form from './Form';
+import useToggler from '../../../hooks/use-toggler';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,10 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AppBar() {
   const classes = useStyles();
-  const [showSearchField, setShowSearchField] = useState(false);
+  const [showSearchField, toggleSearchField] = useToggler();
   const [searchValue, setSearchValue] = useState('');
-
-  const toggleSearchField = () => setShowSearchField(!showSearchField);
 
   const handleSearchChange = ({ target }) => setSearchValue(target.value);
 
